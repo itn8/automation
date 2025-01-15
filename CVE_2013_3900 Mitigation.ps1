@@ -1,5 +1,24 @@
  <# This Script follows CVE mitigation notes to resolve WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation EnableCertPaddingCheck 
  This showed up in the Win Server Vuln Management course project as of 1/15/25
+
+.SYNOPSIS
+    Follows CVE mitigation notes to resolve WinVerifyTrust Signature Validation CVE-2013-3900 Mitigation EnableCertPaddingCheckToggles
+    This showed up in the Win Server Vuln Management course project Tenable scans
+    Make sure to run as Administrator or with appropriate privileges.
+
+.NOTES
+    Author        : Nate Carter
+    Date Created  : 2025-01-15
+    Last Modified : 2025-01-15
+    Version       : 1.0
+
+.TESTED ON
+    Date(s) Tested  : 2025-01-15
+    Tested By       : Nate Carter
+    Systems Tested  : Windows Server 2019 Datacenter, Build 10.0.17763.0
+    PowerShell Ver. : 5.1.17763.6766
+
+
  #>
 
  # Define the registry paths and values
