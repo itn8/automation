@@ -1,0 +1,33 @@
+<#
+CVE-2013-3900 is a high-severity vulnerability in Microsoft Windows that allows remote attackers to execute arbitrary code by exploiting the Authenticode signature verification process for Portable Executable (PE) files. Specifically, this vulnerability enables attackers to modify signed executable files to include malicious code without invalidating the digital signature, potentially gaining full control over affected systems1
+2
+4
+.
+Key Details:
+
+    Affected Functionality: The vulnerability resides in the WinVerifyTrust function, which handles Windows Authenticode signature verification for PE files4
+    .
+    Exploitation: Attackers can add malicious code to signed executables without invalidating their signatures. Exploitation requires users or applications to execute these tampered files, granting attackers the ability to install programs, modify or delete data, or create accounts with full user rights4
+    6
+    .
+    Severity: This vulnerability is classified as high-risk due to its potential for remote code execution and system compromise1
+    3
+    .
+    Weakness Classification: It is categorized under CWE-20 (Improper Input Validation)1
+    .
+
+Mitigation and Updates:
+
+    Microsoft initially introduced an opt-in registry-based mitigation (EnableCertPaddingCheck) for stricter signature verification. However, this was not enforced by default due to compatibility issues with some legitimate software2
+    4
+    .
+    Users must manually enable this stricter verification by configuring registry keys on supported Windows versions (including Windows 10 and 11)5
+    .
+    CISA included CVE-2013-3900 in its Known Exploited Vulnerabilities Catalog in January 2022, urging organizations to apply mitigations by July 20221
+    6
+    .
+
+Exploitation in the Wild:
+The vulnerability has been actively exploited in attacks such as malware distribution and supply chain attacks, including the 3CX Supply Chain Attack6
+. It remains a significant concern despite its age due to its exploitation by threat actors. To protect systems, it is essential to apply Microsoft's recommended mitigations and ensure that registry settings are appropriately configured.
+#>
